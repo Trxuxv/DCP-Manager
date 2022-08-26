@@ -65,8 +65,7 @@
             </div>
           </div>
         </div>
-        <div class="w-full bg-green-50 child-components flex items-center justify-center">
-          Child goes here
+        <div class="w-full bg-white child-components flex items-center justify-center">
           <NuxtChild />
         </div>
       </div>
@@ -96,7 +95,7 @@ export default Vue.extend({
     onLogOut() {
       localStorage.clear();
       window.location.reload();
-      this.$router.push("/");
+      this.$router.push("");
     },
   },
 });

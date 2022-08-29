@@ -12,9 +12,5 @@ export const menu: MenuModel[] = [
   {
     name: 'Landing',
     link: 'landing'
-  },
-  {
-    name: 'Landing',
-    link: 'landing'
   }
 ]

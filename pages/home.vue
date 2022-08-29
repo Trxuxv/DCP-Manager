@@ -8,8 +8,18 @@
             <img class="w-10" src="./../static/icons/3.png" alt="" />
             DCP Management
           </div>
-          <div class="w-full py-4 my-1 mx-2 text-center cursor-pointer" v-for="sm in menuSide" :key="sm.name">
-             <NuxtLink :to="`/home/${sm.link}`">{{ sm.name }}</NuxtLink>
+          <div v-for="sm in menuSide" :key="sm.name">
+            <NuxtLink :to="`/home/${sm.link}`">
+              <div
+                :class="activeMenu === 'home-' + sm.link ? 'activeMenu w-full py-4 px-2 my-1 cursor-pointer text-sm font-bold text-gray-600' : 'w-full py-4 px-2 my-1 text-sm font-medium cursor-pointer menuOption'">
+                {{ sm.name }}
+                <svg v-show="activeMenu === 'home-' + sm.link" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 float-right">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+
+              </div>
+            </NuxtLink>
           </div>
         </div>
         <div class="h-4/6 w-full"></div>
@@ -62,14 +72,18 @@ export default Vue.extend({
       menuSide: menuSide as MenuModel[],
     };
   },
+  computed: {
+    activeMenu() {
+      return this.$route.name;
+    }
+  },
   methods: {
     openMenu() {
       this.sideMenu = !this.sideMenu;
     },
     onLogOut() {
       localStorage.clear();
-      window.location.reload();
-      this.$router.push("");
+      this.$router.push("/auth/login");
     },
   },
 });
@@ -85,5 +99,13 @@ export default Vue.extend({
 
 .child-components {
   height: 90vh;
+}
+
+.activeMenu {
+  background-color: white;
+}
+
+.menuOption:hover{
+  background-color: red;
 }
 </style>

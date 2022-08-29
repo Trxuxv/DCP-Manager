@@ -6,8 +6,12 @@ export const menuSide: MenuModel[] = [
     link: 'general'
   },
   {
+    name: 'Posts',
+    link: 'posts'
+  },
+  {
     name: 'Employees Settings',
-    link: 'landing'
+    link: 'employee-settings'
   },
   {
     name: 'Company Settings',
@@ -16,9 +20,5 @@ export const menuSide: MenuModel[] = [
   {
     name: 'Settings',
     link: 'settings'
-  },
-  {
-    name: 'Landing',
-    link: 'landing'
   }
 ]

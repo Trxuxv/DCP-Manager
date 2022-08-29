@@ -15,14 +15,14 @@
         </p>
         <div class="text-center py-5 flex">
           <div class="w-2/4 text-center">
-           <NuxtLink to="dashboard">
+           <NuxtLink to="/home/dashboard">
             <button type="button"
               class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
               Dashboard</button>
            </NuxtLink>
           </div>
           <div class="w-2/4">
-           <NuxtLink to="settings">
+           <NuxtLink to="/home/settings">
             <button type="button"
               class="text-white bg-gradient-to-br from-pink-500 to-yellow-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Settings</button>
            </NuxtLink>

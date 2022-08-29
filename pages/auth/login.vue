@@ -83,7 +83,7 @@ export default Vue.extend({
       });
       this.login && this.password != null ? localStorage.setItem("session", session) : this.validation = false;
 
-      window.location.reload();
+      this.$router.push('/home')
     },
   },
 });

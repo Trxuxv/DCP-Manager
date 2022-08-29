@@ -6,16 +6,16 @@ export const menuSide: MenuModel[] = [
     link: 'general'
   },
   {
-    name: 'Landing',
+    name: 'Employees Settings',
     link: 'landing'
   },
   {
-    name: 'Landing',
-    link: 'landing'
+    name: 'Company Settings',
+    link: 'company-settings'
   },
   {
-    name: 'Landing',
-    link: 'landing'
+    name: 'Settings',
+    link: 'settings'
   },
   {
     name: 'Landing',

@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-full flex items-center justify-center">
-    <div class="w-5/6 h-5/6 rounded-lg shadow-2xl  overflow-y-scroll">
+    <div class="w-5/6 h-5/6 rounded-lg shadow-2xl  overflow-y-scroll bg-red-200 p-2">
       <div class="overflow-x-auto relative">
         <div class="font-medium text-xl my-2 px-4 bg-white">
           Employees

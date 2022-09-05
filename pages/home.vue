@@ -2,8 +2,8 @@
   <div class="w-full h-screen">
     <div class="flex">
       <!-- Side Menu -->
-      <div v-show="sideMenu" class="w-1/6 h-screen flex flex-col justify-center items-center bg-default">
-        <div class="h-2/6 w-full">
+      <div id="menuSide" class="h-screen flex flex-col justify-center items-center bg-default sideMenu">
+        <div class="h-2/6 w-full" v-show="sideMenu">
           <div class="w-full py-4 text-center flex justify-center bg-gray-50 items-center font-bold top-0">
             <img class="w-10" src="./../static/icons/3.png" alt="" />
             DCP Management
@@ -80,6 +80,12 @@ export default Vue.extend({
   methods: {
     openMenu() {
       this.sideMenu = !this.sideMenu;
+
+      if (this.sideMenu) {
+        document.getElementById('menuSide')?.style.setProperty('width', '300px');
+      } else {
+        document.getElementById('menuSide')?.style.setProperty('width', '0');
+      }
     },
     onLogOut() {
       localStorage.clear();
@@ -94,7 +100,7 @@ export default Vue.extend({
 }
 
 .bg-default-light {
-  background-color: #49978e7e;
+  background-color: #60cabe7e;
 }
 
 .child-components {
@@ -105,7 +111,12 @@ export default Vue.extend({
   background-color: white;
 }
 
-.menuOption:hover{
-  background-color: red;
+.menuOption:hover {
+  background-color: #205149;
+}
+
+.sideMenu {
+  width: 0;
+  transition: 0.4s;
 }
 </style>

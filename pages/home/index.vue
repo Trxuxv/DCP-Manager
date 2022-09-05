@@ -34,8 +34,6 @@
     </div>
   </div>
 </template>
-
-
 <style>
 .vector-index {
   background-image: url('./../../static/vectors/2.jpg');

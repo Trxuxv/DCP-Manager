@@ -27,6 +27,7 @@ export default Vue.extend({
     }
   },
   methods: {
+
     storage() {
       let session = localStorage.getItem("session");
       session != null ? this.isLoggedIn = true : this.isLoggedIn = false;
